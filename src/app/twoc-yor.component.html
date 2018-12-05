@@ -1,0 +1,10 @@
+<h1>Method Three</h1>
+<h3>Different styles of petting a cat</h3>
+<ul>
+  <li *ngFor="let catMethod of catMethods">
+    <!-- If you're doing it this way then probably use a button instead of an a element -->
+    <!-- The empty [routerLink] makes the link style correctly -->
+    <a [routerLink]="['cats',catMethod.id]">{{catMethod.name}}</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

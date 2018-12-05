@@ -1,0 +1,9 @@
+<form #myForm>
+    <label for="name">Name:</label>
+    <input name="name" [(ngModel)]="currentMethod.name"/>
+    <label for="description">Description:</label>
+    <input name="description" [(ngModel)]="currentMethod.description"/>
+    <label for="result">End Result</label>
+    <input name="result" [(ngModel)]="currentMethod.endResult"/>
+</form>
+<button (click)="save()" [disabled]="currentMethod.id &lt; 0">Save Changes</button>

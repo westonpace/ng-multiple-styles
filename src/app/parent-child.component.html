@@ -1,0 +1,10 @@
+<h1>Method Four</h1>
+<h3>Different styles of petting a cat</h3>
+<ul>
+  <li *ngFor="let catMethod of catMethods">
+    <!-- If you're doing it this way then probably use a button instead of an a element -->
+    <!-- The empty [routerLink] makes the link style correctly -->
+    <a [routerLink]="" (click)="setCurrentMethod(catMethod)">{{catMethod.name}}</a>
+  </li>
+</ul>
+<app-cat-form [currentMethod]="currentMethod" (save)="onSave()"></app-cat-form>
