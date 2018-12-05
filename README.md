@@ -1,27 +1,26 @@
 # NgMultipleStyles
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
+This project demonstrates four different methods for communicating between two components.  To run each method specify the configuration.
 
-## Development server
+```
+ng serve --configuration method-one
+ng serve --configuration method-two
+ng serve --configuration method-three
+ng serve --configuration method-four
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Method One
 
-## Code scaffolding
+Found in onec-nor.component.ts.  In this method there is only one component with no routing.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Method Two
 
-## Build
+Found in twoc-nor.component.ts.  In this method there are two components and they communicate via a service.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Method Three
 
-## Running unit tests
+Found in twoc-yor.component.ts.  In this method there are two components and they communicate via URLs.  This is the only method that actually has routing and where the `[RouterLink]` directive is doing anything.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Method Four
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Found in parent-child.component.ts.  In this method there are two components and they share via `@Input`/`@Output`.
